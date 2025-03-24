@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Car{
+            color=null;
+            constructor(color){
+                this.color=color;
+            }
+        }
+        class Test1{
+            static m1(c){
+                console.log("m1 starts");
+                c.color="red";
+                console.log("m1 ends");
+            }
+
+            static main(){
+                console.log("main starts");
+                let c1=new Car("white");
+                console.log(c1.color);
+                Test1.m1(c1);
+                console.log(c1.color);
+                console.log("main ends");
+                
+            }
+        }
+        Test1.main();
+    </script>
+</head>
+<body>
+    <h1>reference type</h1>
+</body>
+</html>

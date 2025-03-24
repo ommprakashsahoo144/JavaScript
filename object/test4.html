@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1={
+            id:101,
+            firstName:"omm",
+            lastName:"prakash",
+            birthYear:2003,
+            calcAge:function(){
+                console.log(this);  //s1
+                let printDetails=()=>{
+                    console.log(this); //s1
+                    console.log(`student name==> ${this.firstName}, student birthYear==> ${this.birthYear} `);
+                }
+                printDetails();
+            }
+        };
+        s1.calcAge();    //method call
+    </script>
+</head>
+<body>
+     <h1>What if we use for arrow function for method ? </h1> 
+     <h2> if we use this keyword inside the arrow function, it will be use it's parent scope this keyword value.</h2>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let l=+prompt("enter the first number");
+        let u=+prompt("enter the last number");
+        let count=0;
+        for(let i=l;i<=u;i++){
+            if(isPalindrome(i)){
+                 if(count%2==0){
+                    console.log(i);
+                 }
+                 count++;
+            }
+        }
+        function isPalindrome(n){
+        let temp=n;
+        let rev=0;
+        while (temp>0){
+            rev=rev*10 + temp%10;
+            temp=Math.trunc(temp/10);
+        }
+        return rev==n;
+    }
+
+    </script>
+</head>
+<body>
+    <h1>WAP to print alternative palindrome number in a range.</h1>
+</body>
+</html>

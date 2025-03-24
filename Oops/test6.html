@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(id,sName,birthYear){
+            this.id=id;
+            this.sName=sName;
+            this.birthYear=birthYear;
+        }
+        Student.prototype.calcAge=function(){
+            let d1=new Date();
+            let currentYear=d1.getFullYear();
+            let age=currentYear-this.birthYear;
+            console.log(age);
+        };
+        Student.prototype.city="Bangalore";
+        let s1=new Student(102,"omPrakash",2002);
+        console.log(s1);
+        s1.calcAge();
+        console.log(s1.city);
+
+
+        let s2=new Student(103,"sonu", 2003);
+        console.log(s2);
+        s2.calcAge();
+        console.log(s2.city);
+    </script>
+</head>
+<body>
+    <h1>javascript prototype</h1>
+    <h2>prototype is a property which will be their for each and every object in javascript.</h2>
+    <h2>in javascript inheritance is perform by using prototype properties.</h2>
+    <h2>inheritance means acquiring property and method one object to another object. </h2>
+</body>
+</html>

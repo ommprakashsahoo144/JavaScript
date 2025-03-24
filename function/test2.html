@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main(); 
+        function main(){
+            console.log("main start");
+            let val=m1(); 
+            console.log("returned value from m1()is"+val);
+
+            console.log("main ends");
+        }
+        function m1(){
+            let n1=10;
+            let sum=n1+20;
+            let mul =sum*10;
+            return sum;
+            return mul; // unreachable statement.
+        }
+    </script>
+</head>
+<body>
+    <h1>The statement which is never is executed throughout the program is known as unreachable statement.</h1>
+    
+</body>
+</html>

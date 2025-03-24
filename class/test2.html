@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class B{
+            constructor(){
+                console.log("Default constructor");
+                
+            }
+            constructor(id){
+                console.log("parameterized constructor");
+            }
+        }
+        new B(1); // it is giving error because js not support constructor overloading.
+        new B();
+    </script>
+</head>
+<body>
+    <h1>class in javascript.</h1>
+    <h1>what is constructor overloading.</h1>
+    <h2>creating multiple constructors in same class with different parameters is known as constructor overloading.</h2>
+    <h2>it not supported in javascript.</h2>
+</body>
+</html>

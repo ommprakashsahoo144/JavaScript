@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers Dropdown</title>
+    <style>
+       .btn {
+        padding: 5px 10px;
+        color: white;
+        background: seagreen;
+        border: none;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <input type="number" placeholder="Enter a number" id="textinput">
+            <label for="text">
+                <select id="dropdown">
+                    <option value="">Select a prime number</option>
+                </select>
+            </label>
+        </div>
+        <br>
+       <button id="submit" class="btn">Submit</button>
+    </section>
+
+    <script>
+        let input = document.getElementById('textinput');
+        let submitBtn = document.getElementById('submit');
+        let dropdown = document.getElementById('dropdown');
+
+        function isPrime(n) {
+            if (n < 2) return false;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+
+        submitBtn.addEventListener('click', () => {
+            let n = parseInt(input.value);
+            if (isNaN(n) || n <= 0) {
+                alert("Please enter a valid positive number.");
+                return;
+            }
+            
+            dropdown.innerHTML = '<option value="">Select a prime number</option>';
+            
+            for (let num = 2; num <= n; num++) {
+                if (isPrime(num)) {
+                    let option = document.createElement('option');
+                    option.value = num;
+                    option.textContent = num;
+                    dropdown.appendChild(option);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

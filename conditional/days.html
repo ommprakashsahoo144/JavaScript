@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+            let y=Number(prompt("Enter the Year"));
+            let m=Number(prompt("Enter the month Number"));
+            if(m==1 || m==3 || m==5 || m==7 || m==8 || m==10 || m==12 ) console.log("31 days");
+            else if(m==4 || m==6 || m==9 || m==11) console.log("30 days");
+
+            else if (m==2){
+                if(y%4==0 || y%4==0 && y%100!=0) console.log("29 days");
+                else console.log("28 days");
+            }
+            else console.log("Invalid Month");
+
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>Write a program to print number of days in a given month based on the year</h1>
+    
+</body>
+</html>

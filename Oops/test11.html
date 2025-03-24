@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1={
+            id:101,
+            sName:"omm",
+            sAge:22,
+            get getsName(){
+                return this.sName;
+            },
+            set setsName(val){
+                this.sName=val;
+            }
+        };
+        console.log(s1.getsName);
+        s1.setsName="ashok";
+        console.log(s1.getsName);
+    </script>
+</head>
+<body>
+    <h1>Encapsulation</h1>
+    <h2>getter properties</h2>
+    <h2>setter properties</h2>
+</body>
+</html>

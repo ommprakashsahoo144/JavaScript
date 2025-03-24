@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n,a,b,c;
+        n=8; a=0; b=1; c=0;
+        for(;true;){
+             c=a+b;
+            if(c==n || n==0){
+                console.log(`${n} is belongs to fibonacci serise`);
+                break;
+            }
+            if(c>n){
+                console.log(`${n}is not fibonacci serise`);
+                 break;
+                }
+         a=b;
+         b=c;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>WAP to check given number is belong to fibonacci serise or not</h1>
+</body>
+</html>

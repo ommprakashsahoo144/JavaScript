@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n=5;
+        let res="";
+        let sp=n-1;
+        for(let i=1;i<=n;i++){
+            for(let j=1;j<=sp;j++){
+                res +=" ";
+            }
+            for(let j=1;j<=i;j++){
+                res +=j;
+            }
+            res +="\n";
+            sp--;
+        }
+        console.log(res);
+    </script>
+</head>
+<body>
+    <h1>reverse triangle</h1>
+</body>
+</html>

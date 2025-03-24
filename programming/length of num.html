@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n=123;
+        let count=0;
+        while(n){
+            n=Math.trunc(n/10);
+            count++;
+        }
+        
+        console.log(count);
+
+        //user input.
+
+
+        let num=+prompt("enter the number");
+        function len(num){
+            let count=0;
+            while(num){
+                num=Math.trunc(num/10);
+                count ++;
+            }
+            return count;
+        }
+        console.log(len(num));
+    </script>
+</head>
+<body>
+    <h1>WAP to print length of the number.</h1>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(id,sName,birthYear){
+            this.id=id;
+            this.sName=sName;
+            this.birthYear=birthYear;
+        }
+        Student.prototype.calcAge=function(){
+            let d1=new Date();
+            let currentYear=d1.getFullYear();
+            let age=currentYear-this.birthYear;
+            console.log(age);
+        };
+        Student.prototype.city="Bangalore";
+        let s1=new Student(102,"omPrakash",2002);
+        console.log(s1);
+        s1.calcAge();
+        console.log(s1.city);
+
+
+        let s2=new Student(103,"sonu", 2003);
+        console.log(s2);
+        s2.calcAge();
+        console.log(s2.city);
+
+
+        console.log(s1.hasOwnProperty('sName'));
+        console.log(s2.hasOwnProperty('birthYear'));
+        console.log(s1.hasOwnProperty('address'));
+        console.log(Object.prototype);
+        console.log(s1.__proto__);
+        console.log(s1.__proto__.__proto__);
+
+    </script>
+</head>
+<body>
+    <h1>prototypal chaining</h1>
+    <h2>when ever  we use a property or method then javascript will search for those properties or method in current object 
+        if it is not avaliable the it will checking it's parents prototype object and this process continues until object.prototype</h2>
+</body>
+</html>

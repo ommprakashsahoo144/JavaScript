@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Car{
+            start(){}
+            accelerate(){}
+            breaks(){}
+        }
+        class Benz extends Car{
+            start(){
+                console.log("Benz starts");
+            }
+            accelerate(){
+                console.log("Benz accelerates");
+            }
+            breaks(){
+                console.log("Benz breaks");
+            }
+        }
+        class Audi extends Car{
+            start(){
+                console.log("Audi starts");
+            }
+            accelerate(){
+                console.log("Audi accelerates");
+            }
+            breaks(){
+                console.log("Audi breaks");
+            }
+        }
+        class Driver{
+            drive(c){
+                c.start();
+                c.accelerate();
+                c.breaks();
+            }
+        }
+        class Test1{
+            static main(){
+                let d1=new Driver();
+
+                let b1=new Benz();
+                d1.drive(b1);
+                d1.drive(new Audi());
+            }
+        }
+        Test1.main();
+    </script>
+</head>
+<body>
+    <h1>polymorphism</h1>
+    <h1>abstraction</h1>
+</body>
+</html>

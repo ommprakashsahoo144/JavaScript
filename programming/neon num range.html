@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let l=+prompt("enter the starting range");
+        let u=+prompt("enter the ending range");
+        for (let i=l;i<=u;i++){
+            if(isNeon(i)){
+                console.log(i);
+            }
+        }
+        function isNeon(n){
+            let sqt=n*n;
+            let sum=0;
+            while(sqt>0){
+                sum +=sqt%10;
+                sqt=Math.trunc(sqt/10);
+            }
+            return sum==n;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>WAP to print the neon number in range.</h1>
+</body>
+</html>

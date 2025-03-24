@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let t1={
+            travelsName:"VRL",
+            busId:"VR101"
+        };
+        let t2={
+            travelsName:"orange",
+            busId:"OR103"
+        };
+        let book=function(pName,seatNo){
+            console.log(`Hey ${pName},you have booked seat in ${this.travelsName} travels with seat number ${seatNo}`);
+        }
+        let copyFn=book.bind(t1,"omm");
+        copyFn(2);
+        copyFn(3);
+        copyFn(4);    
+
+    </script>
+</head>
+<body>
+    <h1>function methods</h1>
+    <h2>1. F/N .bind() :-</h2>
+    <h2>By using Bind() method we can set this keyword value explicitly.</h2>
+    <h2>Bind() method will not call a function immediately, instate it will return a copy of function that function can be executed again and again. </h2>
+    <h2>by bind() method we can pre-set some of the functional arguments.</h2>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main();
+        function main(){
+            console.log("main starts");
+            m1(100,200);
+            console.log("main ends");
+        }
+        function m1(){
+            console.log(arguments.length);
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+        }
+    </script>
+</head>
+<body>
+    <h1>Arguments objects.</h1>
+    <h2>Arguments is a local variable which contains all the values which be pass at function call in form of index.</h2>
+</body>
+</html>

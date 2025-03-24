@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1={
+            id:101,
+            firstName:"omm",
+            lastName:"prakash",
+            birthYear:2003,
+            calcAge:()=>{    //it is a arrow function.
+                console.log(this);  //window object
+                let d1=new Date();
+                let currentYear = d1.getFullYear();
+                let age=currentYear-this.birthYear;
+                console.log(age);
+            }
+        };
+        s1.calcAge();    //method call
+    </script>
+</head>
+<body>
+     <h1>What if we use for arrow function for method ? </h1> 
+     <h2> in Arrow function does not have it's own this keyword.</h2>
+</body>
+</html>

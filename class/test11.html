@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            constructor(id,name,birthYear){
+                this.id=id;
+                this.name=name;
+                this.birthYear=birthYear;
+            }
+            calcAge(){
+                let currentYear=new Date().getFullYear();
+                let age=currentYear-this.birthYear;
+                console.log("age="+age);
+            }
+        }
+
+        class Employee extends Person{
+            constructor (id,name,birthYear,desg,sal){
+                super(id,name,birthYear); // call to super
+                this.desg=desg;
+                this.sal=sal;
+            }
+            calcSal(){
+                let annualSal=this.sal*12;
+                console.log("Annual salary=" +annualSal);
+            }
+        }
+
+        class Test4{
+            static main(){
+                let e1=new Employee(101,"omm",2002,"dev",10000);
+                console.log(e1);
+                e1.calcAge();
+                e1.calcSal();
+            }
+        }
+        Test4.main();
+    </script>
+</head>
+<body>
+    <h1>call to super()</h1>
+    <h1>call to super statement used to call parent class constructor from child class constructor.</h1>
+</body>
+</html>

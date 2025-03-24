@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Person={
+            calcAge(){
+                let currentYear=new Date().getFullYear();
+                let age=currentYear-this.birthYear;
+                console.log("age="+age);
+            }
+
+        };
+        let s1=Object.create(Person);
+        s1.id=102;
+        s1.sname="omm";
+        s1.birthYear=2001;
+        console.log(s1);
+        s1.calcAge();
+    </script>
+</head>
+<body>
+    <h1>Object.create()</h1>
+    <h1>By using Object.create() method we can achieve prototypal Inheritance</h1>
+</body>
+</html>

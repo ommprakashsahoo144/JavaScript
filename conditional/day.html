@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+            let d1=newDate();
+            let day= d1. newDate();
+            let toDay="Today is";
+            switch(day){
+                case 0:
+                    toDay +="Sunday";
+                    break;
+                case 1:
+                    toDay +="Monday";
+                    break;
+                case 2:
+                    toDay +="Tuesday";
+                    break;
+                case 3:
+                    toDay +="Wednesday";
+                    break;
+                case 4:
+                    toDay +="thursday";
+                    break;
+                case 5:
+                    toDay +="Friday";
+                    break;
+                case 6:
+                    toDay +="Saturday";
+                    break;
+                default:
+                    console.log("Invalid day");
+            }
+            console.log(toDay);
+
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>Switch Statement.</h1>
+    <h2>WAP to print day</h2>
+</body>
+</html>

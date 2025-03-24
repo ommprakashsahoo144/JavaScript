@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n=5;
+        let res="";
+        let mid=Math.ceil(n/2);
+        for(let i=1;i<=n;i++){
+            for(let j=1;j<=n;j++){
+                if(j==mid){
+                    res +=i;
+                }
+                else if(i==mid){
+                    res +=j;
+                }
+                else{
+                    res +=" ";
+                }
+            }
+            res +="\n";
+        }
+        console.log(res);
+    </script>
+</head>
+<body>
+    <h1>pluse symbol</h1>
+</body>
+</html>

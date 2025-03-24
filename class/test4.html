@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class D{
+            static n1=10 // static variable
+            n2=20; // non-static variable
+
+            static main(){
+                let a=1; // local variable
+                console.log(a);
+                console.log(D.n1); //static variable call
+
+                let d1=new D();
+                console.log(d1.n2); //non-static variable call
+            }
+        
+        }
+        D.main();
+    </script>
+</head>
+<body>
+    <h1>types of variable in class base programming</h1>
+    <h2>there 3  types of variables</h2>
+    <li>Local variable</li>
+    <p>The Variable which is created inside the method is known as local variable.</p>
+    <li>Static variable</li>
+    <p>The Variable which is created inside the class and outside the method with Static keyword is known as Static
+         variable.
+    </p>
+    <li>Non-Static Variable</li>
+    <p>The Variable which is created the class and outside the method without using  Static keyword is known as Non-static variable.</p>
+</body>
+</html>

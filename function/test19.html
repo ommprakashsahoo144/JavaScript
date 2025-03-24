@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(n1,n2,type){
+            let res=0;
+            res=type(n1,n2);
+            return res;
+        }
+        let r1=calc(10,2,mul);  //call back function
+        let r2=calc(10,20,sum);
+        console.log(r1);
+        console.log(r2);
+
+        function sum(a,b){
+            return a+b;
+        }
+
+        function mul(a,b){
+            return a*b;
+        }
+    </script>
+</head>
+<body>
+    <h1>CALL BACK FUNCTION.</h1>
+    <h2>A function which is passed as an argument to another function is known as callback function.</h2>
+</body>
+</html>

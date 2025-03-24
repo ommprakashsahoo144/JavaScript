@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+     Array.prototype.myReverse = function(){
+        let start  = 0;
+        let end = this.length -1;
+    
+       while(start < end){
+        let temp = this[start];
+        this[start]=this[end];
+        this[end]= temp;
+        
+        start++;
+        end--
+       }
+    
+    return this;
+    
+}
+
+       let a = [1,2,3,9,4,5]
+        console.log(a)
+        a.myReverse();
+        console.log(a)
+    </script>
+</body>
+</html>

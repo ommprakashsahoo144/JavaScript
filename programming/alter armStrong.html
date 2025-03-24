@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let l=+prompt("enter the starting number");
+         let u=+prompt("enter the last number");
+         let count=0;
+         for(let i=l;i<=u;i++){
+            if(isArmStrong(i)){
+                if(count%2==0){
+                    console.log(i);
+                }
+                count++;
+            }
+         }
+        function len(n){
+            let c=0;
+            while(n>0){
+                c++;
+                n=Math.trunc(n/10);
+            }
+            return c;
+        }
+        function isArmStrong(n){
+            let l=len(n);
+            let sum=0;
+            let temp=n;
+            while(temp>0){
+                let ld=temp%10;
+                sum +=Math.pow(ld,l);
+                temp=Math.trunc(temp/10);
+            }
+            return(sum==n);
+        }
+    </script>
+</head>
+<body>
+    <h1>WAP to print alternative armstrong number with the range.</h1>
+</body>
+</html>

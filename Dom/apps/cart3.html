@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Amazon</h1>
+        <section>
+            <button id="dec-btn">Dec</button>
+            count: <span id="display"></span>
+            <button id="inc-btn">Inc</button>
+        </section>
+    </div>
+
+<script>
+    let incBtn = document.getElementById('inc-btn');
+    let decBtn = document.getElementById("dec-btn");
+    let displayTag = document.getElementById('display');
+
+    let c= localStorage.getItem('count')?Number(localStorage.getItem('count')):0;
+    displayTag.textContent=c;
+
+    function incCount(){
+        c++;
+        localStorage.setItem('count',c);
+        displayTag.textContent = Number(localStorage.getItem('count'));
+    }
+    incBtn.addEventListener('click',incCount);
+
+    function decCount(){
+        c--;
+        localStorage.setItem('count',c);
+        displayTag.textContent=Number(localStorage.getItem('count'));
+    }
+    decBtn.addEventListener('click',decCount);
+
+</script>
+</body>
+</html>

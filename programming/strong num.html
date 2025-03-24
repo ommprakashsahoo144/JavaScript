@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n=+prompt("enter the number");
+        function fact(num){
+            let prod=1;
+            for(let i=1;i<=num;i++){
+                prod *=i;
+            }
+            return prod;
+        }
+        function isStrongNum(n){
+            let temp=n;
+            let sum=0;
+            while(n){
+                sum +=fact(n%10);
+                n=Math.trunc(n/10);
+            }
+            return temp==sum;
+        }
+        if(isStrongNum(n)) console.log(`${n} is strong number`);
+        else  console.log(`${n} is not a strong number`);
+        
+    </script>
+</head>
+<body>
+    <h1>WAP to print number is strong number or not</h1>
+</body>
+</html>

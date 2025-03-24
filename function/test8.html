@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main();
+        function main(){
+            m1(1,2,3);
+            m1(100,200,300);
+            m1(1,"abc",true);
+        }
+        function m1(){
+           let len=arguments.length;
+           for(let i=0; i<len; i++){
+            console.log(arguments[i]);
+           }
+           console.log("===========");
+        }
+    </script>
+</head>
+<body>
+    <h1>Arguments objects.</h1>
+    <h2>Arguments is a local variable which contains all the values which be pass at function call in form of index.</h2>
+</body>
+</html>

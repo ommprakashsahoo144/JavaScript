@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Animal{
+            move(){
+                console.log("running impl");
+            }
+        }
+        class Snake extends Animal{
+            move(){
+                console.log("crawling impl");
+            }
+        }
+
+        class Test1{
+            static main(){
+                let s=new Snake();
+                s.move();
+            }
+        }
+        Test1.main();
+    </script>
+</head>
+<body>
+    <h1>method over riding</h1>
+    <h1>changing the parent class non-static method implementation in child class non-static method is known as method over riding. </h1>
+</body>
+</html>

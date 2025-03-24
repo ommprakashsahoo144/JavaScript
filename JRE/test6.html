@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student={
+            stuId:101,
+            firstName:"OMM",
+            lastName:"prakash",
+            birthYear:2003,
+            gender:"male",
+            calAge: function(){
+                console.log(this) ///student object
+                let d1= new Date();
+                let currentYear=d1.getFullYear();
+                let age=currentYear-this.birthYear;
+                console.log(age);
+            }
+        };
+        student.calAge();  // method function call
+
+    </script>
+</head>
+<body>
+    <h1>this keyword</h1>
+    <h2>method function call</h2>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let t1={
+            travelsName:"VRL",
+            busId:"VR101"
+        };
+        let t2={
+            travelsName:"orange",
+            busId:"OR103"
+        };
+        let book=function(pName,seatNo){
+            console.log(`Hey ${pName},you have booked seat in ${this.travelsName} travels with seat number ${seatNo}`);
+        }
+        book("OMM", 21);
+        book.call(t1,"Kiran",23); // F/N.call(this, arg1,arg2...) 
+        book.call(t2,"tarun",1); 
+
+
+    </script>
+</head>
+<body>
+    <h1>function methods</h1>
+    <h2>1. F/N .call() :-</h2>
+    <h2>By using call() method, we can set this keyword value explicitly ,by passing owner object as an argument.</h2>
+    <h2>in call() method the function arguments must be passed directly. </h2>
+</body>
+</html>

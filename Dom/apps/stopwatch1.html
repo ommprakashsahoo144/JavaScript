@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Countdown</title>
+    <style>
+        div#container {
+            width: 700px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #clock {
+            text-align: center;
+            font-size: 4rem;
+        }
+
+        button {
+            font-size: 1rem;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clock">
+            <span id="min">02</span> :
+            <span id="sec">00</span> :
+            <span id="mSec">00</span>
+            <br>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
+
+    <script>
+        let minTag = document.getElementById('min');
+        let secTag = document.getElementById('sec');
+        let mSecTag = document.getElementById('mSec');
+        let startBtn = document.getElementById('start');
+        let stopBtn = document.getElementById('stop');
+        let clearBtn = document.getElementById('clear');
+
+        let min = 2, sec = 0, mSec = 0;
+        let id = null;
+
+        function display() {
+            minTag.innerText = min < 10 ? "0" + min : min;
+            secTag.innerText = sec < 10 ? "0" + sec : sec;
+            mSecTag.innerText = mSec < 10 ? "0" + mSec : mSec;
+        }
+
+        function start() {
+            if (id !== null) return; // Prevent multiple intervals
+
+            id = setInterval(() => {
+                if (mSec > 0) {
+                    mSec--;
+                } else if (sec > 0) {
+                    sec--;
+                    mSec = 99;
+                } else if (min > 0) {
+                    min--;
+                    sec = 59;
+                    mSec = 99;
+                } else {
+                    clearInterval(id);
+                    id = null;
+                    alert("Task is completed.");
+                    return;
+                }
+                display();
+            }, 10);
+        }
+
+        function stop() {
+            clearInterval(id);
+            id = null;
+        }
+
+        function clear() {
+            stop();
+            min = 2;
+            sec = 0;
+            mSec = 0;
+            display();
+        }
+
+        startBtn.addEventListener('click', start);
+        stopBtn.addEventListener('click', stop);
+        clearBtn.addEventListener('click', clear);
+
+        display();
+    </script>
+</body>
+</html>

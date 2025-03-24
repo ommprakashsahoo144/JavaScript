@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1={
+            id:101,
+            firstName:"Ashok",
+            lastName:"kumar",
+            birthYear:1997
+        };
+            let calcAge =function(){
+                console.log(this);  //s1
+            }
+        
+        calcAge(); //window object
+        calcAge.call(s1); //s1   
+    </script>
+</head>
+<body>
+    <h1>function methods</h1>
+    <h2>1. F/N call() :-</h2>
+    <h2>By using call() method, we can set this keyword value explicitly ,by passing owner object as an argument.</h2>
+    <h2>in call() method the function arguments must be passed directly. </h2>
+</body>
+</html>

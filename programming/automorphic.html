@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num=+prompt("enter the number");
+        function isAutomorphic(n){
+            let sqt=n*n;
+            while(n>0){
+                if(n%10 != sqt%10){
+                    return false;
+                }
+                n=Math.trunc(n/10);
+                sqt=Math.trunc(sqt/10);
+            }
+            return true;
+        }
+        if(isAutomorphic(num)){
+            console.log(`${num} is Automorphic number`);
+        }
+        else console.log(`${num} is not automorphic number`);
+    </script>
+</head>
+<body>
+    <h1>WAP to print AUTOMORPHIC number or not</h1>
+</body>
+</html>

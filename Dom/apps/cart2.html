@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Like System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #e64c82;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #b9dcde;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin-left: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .icons {
+            margin-top: 10px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .icons span {
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Instagram</div>
+    <div class="container">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://media.istockphoto.com/id/2170790699/photo/a-christmas-tree-ornament-with-a-glass-ball-inside-of-it.jpg?s=2048x2048&w=is&k=20&c=Es7yAMYyKWMAHd-hqbhkUYtyo0rHmwQIFm3SPezr0n0=" alt="Post Image">
+            </div>
+            <div class="icons">
+                <span onclick="likePost()">👍</span>
+                <span onclick="dislikePost()">👎</span>
+            </div>
+            <p>Total Likes: <span id="likeCount">0</span></p>
+            <p>Total Dislikes: <span id="dislikeCount">0</span></p>
+        </div>
+    </div>
+    <script>
+        let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0;
+        let dislikeCount = localStorage.getItem('dislikeCount') ? parseInt(localStorage.getItem('dislikeCount')) : 0;
+        
+        document.getElementById('likeCount').innerText = likeCount;
+        document.getElementById('dislikeCount').innerText = dislikeCount;
+        
+        function likePost() {
+            likeCount++;
+            localStorage.setItem('likeCount', likeCount);
+            document.getElementById('likeCount').innerText = likeCount;
+        }
+
+        function dislikePost() {
+            dislikeCount++;
+            localStorage.setItem('dislikeCount', dislikeCount);
+            document.getElementById('dislikeCount').innerText = dislikeCount;
+        }
+    </script>
+</body>
+</html>

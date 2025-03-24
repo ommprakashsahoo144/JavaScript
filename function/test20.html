@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+            let a=10;
+            let b=20;
+            function m1(){
+                console.log("m1 starts");
+                console.log("m1 ends ");
+            }
+            return m1;
+        }
+        let r1=main();
+        console.log(r1);
+        r1();
+    </script>
+</head>
+<body>
+   <h1>A function can return another function.</h1>4
+</body>
+</html>

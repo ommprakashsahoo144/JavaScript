@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+    
+        }
+        div{
+            background-color: black;
+            border-radius: 6px;
+        }
+        
+        div>button{
+            padding: 10px;
+            text-align: center;
+           margin-left: 50px;
+           margin-top: 10px;
+           border: 20px;
+           background-color: aquamarine;
+           border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="changeTitle()">Home</button>
+        <button id="about-btn">About</button>
+        <button id="contact-btn">Contact</button>
+    </div>
+<script>
+    //inline Event handler
+    function changeTitle()
+    {
+        document.title="Home Pages";
+    }
+
+    //By Using Event Properties
+    let aboutBtn=document.getElementById('about-btn');
+    aboutBtn.onclick=function()
+    {
+        document.title="About Pages"
+    }
+
+    //By using addEventListener() method
+    let ContactBtn = document.querySelector('#contact-btn');
+    ContactBtn.addEventListener('click', function() {
+        document.title = "Contact Page";
+    });
+</script>
+</body>
+</html>

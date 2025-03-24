@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .btn{
+        top: 30px;
+        padding: 3px;
+        color: black;
+        background: seagreen;
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <input type="text" placeholder="text" id="textinput">
+            <label for="text">
+                <select name="you" id="">
+                    <option value="you">you</option>
+                    <option id="dropdown" value=""></option>
+                </select>
+            </label>
+        </div>
+        <br>
+       <button id="submit" class="btn">submit</button>
+    </section>
+
+    <script>
+        let input=document.getElementById('textinput');
+        let submitBtn=document.getElementById('submit');
+        let dropdown=document.getElementById('dropdown');
+        input.addEventListener('input',(e)=>{
+
+            console.log(input.value);
+            dropdown.innerHTML=input.value;
+
+        })
+    </script>
+</body>
+</html>

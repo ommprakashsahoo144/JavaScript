@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           let num=+prompt("enter the number");
+        function len(n){
+            let c=0;
+            while(n>0){
+                c++;
+              n=  Math.trunc(n/10);
+            }
+            return c;
+        }
+        function power(b,i){
+            let prod=1;
+            for(let j=1;j<=i;j++){
+                prod *=b;
+            }
+            return prod;
+        }
+        function isArmstrong(n){
+            let sum=0;
+            let temp=n;
+            let l=len(n);
+            while(temp>0){
+                let ld=temp%10;
+                sum +=power(ld,l);
+                temp=Math.trunc(temp/10);
+            }
+            return sum==n;
+        }
+        if(isArmstrong(num)) console.log(`${num} is armstrong`);
+        else console.log(`${num} is not armstrong`);
+    </script>
+</body>
+</html>

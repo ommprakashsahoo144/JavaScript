@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class E{
+            static n1=0;
+            n2=0;
+            static main(){
+                let e1=new E();
+                console.log(e1.n2);
+                e1.n2=10;
+                console.log(e1.n2);
+
+                let e2=new E();
+                console.log(e2.n2);
+                e2.n2=100;
+                console.log(e2.n2);
+            }
+        }
+        E.main();
+    </script>
+</head>
+<body>
+    <h1>Non-static variable</h1>
+    <h2>For non-static variable new memory will created for each and every object creation.</h2>
+</body>
+</html>

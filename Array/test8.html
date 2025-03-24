@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let colors1=["blue","black","red","yellow","green"];
+        console.log(colors1);
+        let colors2=colors1  // shallow copy
+        console.log(colors2);
+        colors2[1]="brown";
+        console.log(colors1[1],colors2[1]);
+
+
+        let colors3=[...colors1]; // deep copy
+        console.log(colors3);
+        colors3[1]="black";
+        console.log(colors1[1],colors3[1]);
+
+
+        let colors3=colors1.slice(); //deep copy
+        console.log(colors3);
+        colors3[1]="black";
+        console.log(colors1,colors3);
+    </script>
+</head>
+<body>
+    <h1>arr.slice()</h1>
+    <h2>slice method is used to extract the part of an array.</h2>
+    <h2>slice method will returns an array without affecting original array</h2>
+    <h1>shallow copy.</h1>
+    <h2>in shallow copy if we make any changes in cloned object it will reflect in the original object
+         because both are pointing to same reference.</h2>
+         <h1>deep copy.</h1>
+         <h2>in deep copy if we make any changes in cloned object it will not reflect in the original object
+            because both are pointing to different reference.</h2>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one"> This is Header One</h1>
+    <h1>This header two</h1>
+    <div>
+        <h2>Course:-</h2>
+        <ol>
+            <li class="abc">JavaScript</li>
+            <li>ReactJs</li>
+            <li class="abc"> NodeJs</li>
+        </ol>
+    </div>
+    <script>
+        let htmlDoc=document.documentElement;
+        console.log(htmlDoc);
+
+        let h1Tag=document.body.h1;
+        console.log(h1Tag);
+
+        //Document object method
+        h1Tag=document.getElementById('one');
+        console.log(h1Tag);
+
+        let listTags=document.getElementsByTagName('li');
+        console.log(listTags);
+
+
+        let listTagsClass=document.getElementsByClassName('abc');
+        console.log(listTagsClass);
+
+        //based on css selector
+
+        h1Tag=document.querySelector('#one');
+        console.log(h1Tag);
+
+        listTags=document.querySelector('li');
+        console.log(listTags);
+
+        listTagsClass=document.querySelector('.abc');
+        console.log(listTagsClass);
+
+        listTags=document.querySelectorAll('li');
+        console.log(listTags);
+    </script>
+</body>
+</html>

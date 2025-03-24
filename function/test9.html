@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main();
+        function main(){
+            add(1,2);
+        }
+        function add(n1,n2){
+            console.log(n1+n2);
+        }
+        function add(n1,n2,n3){
+            console.log(n1+n2+n3); // the last created function is executed because js not support the function overloading concepts.
+        }
+    </script>
+</head>
+<body>
+    <h1>Function overloading.</h1>
+    <h2>creating multipule function with same name but different parameters is known as function overloading.</h2>
+</body>
+</html>

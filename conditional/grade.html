@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+            let s1=36; s2=45; s3=72; s4=88; s5=99;
+            if(s1<35 || s2<35 || s3<35 || s4<35 || s5<35){
+                console.log("fail");
+            }
+            else{
+                let totalMarks=s1+s2+s3+s4+s5;
+                let percentages = (totalMarks/500)*100;
+                let grade= " ";
+                if (percentages>90){
+                    grade =" A";
+                }
+                else if(percentages>=80){
+                    grade="B";
+                }
+                else if(percentages>=70){
+                    grade = "C";
+                }
+                else if(percentages>=60){
+                    grade="D";
+                }
+               else{grade="e";}
+               console.log("percentages:"+percentages+"%");
+               console.log("Grade:"+grade);
+            }
+
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>WAP to print the calculate total sub mark and grade.</h1>
+</body>
+</html>

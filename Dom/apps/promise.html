@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promiseOne = new Promise(function(resolve,reject){
+            setTimeout(() => {
+                let error = true
+                if(!error){
+                    resolve({username:"omm",password:123})
+                }
+                else{
+                    reject("Something error")
+                }
+            }, 1000);
+        })
+
+        // promiseOne.then(function(user){
+        //    console.log(user);
+        //     return user.username
+        // }).then(function(username){
+        //     console.log(username);
+        // }).catch(function(err){
+        //     console.log(err);
+            
+        // }).finally(()=>{
+        //     console.log("oooo");
+            
+        // })
+        async function RecivePromise() {
+           try {
+            const recive = await promiseOne
+            console.log(recive);
+           } catch (error) {
+            console.log(error);
+            
+           }
+            
+        }
+        RecivePromise()
+    </script>
+</body>
+</html>

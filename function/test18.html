@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main();
+        function main(){
+            let res_1=sum(1,2);
+            console.log("result = " +res_1);
+            res_1=sum(1,2,3);
+            console.log("result = "+res_1);
+        }
+        function sum(a=0,b=0,c=0){
+            return a+b+c;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Default parameter/ Optional parameter</h1>
+    <h2>Default parameter makes as to provide default values to formal parameter when less , no values are passed at function call.</h2>
+</body>
+</html>

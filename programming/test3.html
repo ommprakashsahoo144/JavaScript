@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let l=+prompt("enter a starting range");
+        let u=+prompt("enter the ending range");
+        let count=0;
+        for(let i=l;i<=u;i++){
+            if(isStrongNum(i)){
+                count++;
+                if(count==3){
+                    console.log(i);
+                }
+            }
+        }
+       
+        function fact(n){
+            let prod=1;
+            for(let i=1;i<=n;i++){
+                prod *=i;
+            }
+            return prod;
+        }
+        function isStrongNum(n){
+            let temp=n;
+            let sum=0;
+            while(n){
+                sum +=fact(n%10);
+                n=Math.trunc(n/10);
+            }
+            return temp==sum;
+        }
+       
+        
+    </script>
+</head>
+<body>
+    <h1>WAP to print alternative  strong number in a range </h1>
+</body>
+</html>

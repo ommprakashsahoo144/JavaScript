@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function stuDetails(id,sname){
+            var course="mern";
+            let inst="Jspider";
+            const barnch="marathahalli";
+            console.log(id,sname);
+
+            function printDetails(){
+                console.log(`student name => ${sname}, institute name => ${inst}`);
+            }
+            let greetMsg=function(){
+                console.log(`HII ${sname}  welcome to ${inst}`);
+            }
+            var wishMsg=()=>{
+                console.log(`Hii ${sname} Happy Birthday`);
+            }
+        }
+        stuDetails(101,"OMM");
+    </script>
+</head>
+<body>
+    <h1>execution context</h1>
+    <h1>variable environment / variable object.</h1>
+    <p>variable object is a properties of execution context , where all the javascript functions, variables and inner function declaration memory will be created.</p>
+</body>
+</html>

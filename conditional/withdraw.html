@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+            let accBal=1000000;
+            let amt=Number(prompt("Enter your Amount"));
+            if(amt<=accBal){
+                console.log("Withdraw the balance Successfully");
+                accBal=accBal-amt;
+                console.log(`your avaliable balance is ${accBal}`);
+            }
+            else
+            {
+                console.log("Invalid Balance");
+                console.log(`Enter amount is ${amt} but the avaliable balance ${accBal}`);
+            }
+
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>Write a program for withdraw process</h1>
+</body>
+</html>

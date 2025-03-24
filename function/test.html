@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main(); // function call before function declaration.
+        function main(){
+            console.log("main start");
+            m1(); // function call.
+            console.log("main ends");
+        }
+        function m1(){
+            console.log("m1 starts");
+            console.log("m1 ends");
+        }
+    </script>
+</head>
+<body>
+    <h1>Function calling can be called before function can be declaration.</h1>
+    
+</body>
+</html>

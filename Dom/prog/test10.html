@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        #grand-parent{
+            height: 400px;
+            width: 400px;
+            border: 2px,solid,black;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: red;
+        }
+        #parent{
+            height: 250px;
+            width: 250px;
+            border: 2px,solid,black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color:yellow;  
+        }
+        #child{
+            height: 150px;
+            width: 150px;
+            border: 2px,solid,black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color:green; 
+        }
+    </style>
+</head>
+<body>
+    <div id="grand-parent">
+        <div id="parent">
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let gd=document.getElementById('grand-parent');
+        let p=document.getElementById('parent');
+        let ch=document.getElementById('child');
+
+        gd.addEventListener('click',(e)=>{
+            e.stopPropagation();
+            console.log("red-light");
+        });
+
+        p.addEventListener('click',(e)=>{
+            e.stopPropagation();
+            console.log("yellow-light");
+        });
+        ch.addEventListener('click',(e)=>{
+            e.stopPropagation();
+            console.log("green-light");
+        });
+    </script>
+</body>
+</html>

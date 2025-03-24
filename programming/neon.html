@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num=+prompt("enter the number");
+        function isNeon(n){
+            let sqt=n*n;
+            let sum=0;
+            while(sqt>0){
+                sum +=sqt%10;
+                sqt =Math.trunc(sqt/10);
+            }
+            return sum==n;
+        }
+        if(isNeon(num))  console.log(`${num} is neon number`);
+        else console.log(`${num} is not neon number`);
+    </script>
+</head>
+<body>
+    <h1>WAP to print the neon number.</h1>
+</body>
+</html>

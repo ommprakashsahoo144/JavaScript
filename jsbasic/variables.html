@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 100; // Global variable. outside the function.
+        function main(){
+            let n = 200; // Local Variable. inside the function.
+            console.log(n);
+            console.log(a);
+        }
+        main(); // function call.
+        console.log(a);// we can print the Global variable outside the function
+    </script>
+</head>
+<body>
+    <header>
+        <h1>JavaScript is a multi paradigm(approach) programming language which means we can write both procedural oriented as well as object oriented. </h1>
+        <h2>In procedural oriented or functional oriented programming there are two types of variable.</h2>
+        <ul>
+            <li>Local variable</li>
+            <li>Global variable</li>
+        </ul>
+    </header>
+    <h1>Local variable</h1>
+    <li>The variable which is created inside the function or block is call Local variable. </li>
+    <h1>Global variable</h1>
+    <li>The variable which is outside the function or block is called Global variable.</li>
+</body>
+</html>

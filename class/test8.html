@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Student{
+            static count=0;
+            constructor(){
+                Student.count++;
+            }
+        }
+
+        class Test2{
+            static main(){
+                console.log(`no of student creates ${Student.count}`);
+
+                new Student();
+                new Student();
+                new Student();
+
+                console.log(`no of student ${Student.count}`);
+            }
+        }
+        Test2.main();
+    </script>
+</head>
+<body>
+    <h1>using constructor</h1>
+    <h2>Non-static method are attached to prototype object.</h2>
+    <h2>Static method are not attached to prototype object.</h2>
+</body>
+</html>

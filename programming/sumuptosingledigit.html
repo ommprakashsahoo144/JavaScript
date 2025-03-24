@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num=+prompt("enter the number");
+        function sumofdigits(n){
+            let sum=0;
+            while(n>0){
+                sum+=n%10;
+                n=Math.trunc(n/10)
+                if(n==0 && n>9){
+                    n=sum;
+                    sum=0;
+                }
+            }
+            return sum;
+        }
+        console.log(sumofdigits(num));
+    </script>
+</head>
+<body>
+    <h1>WAP to print sum of digits upto single digits.</h1>
+</body>
+</html>

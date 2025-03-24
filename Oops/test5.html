@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(id,sName,birthYear){
+            this.id=id;
+            this.sName=sName;
+            this.birthYear=birthYear;
+        }
+        
+        let s1= new Student(101,"omm", 2003);
+        console.log(s1);
+
+        let s2= new Student(103,"ommPrakash", 2002);
+        console.log(s2);
+
+        let s3=null;
+        console.log(s1 instanceof Student);
+        console.log(s2 instanceof Student);
+        console.log(s3 instanceof Student);
+    </script>
+</head>
+<body>
+    <h1>parameterized constructor</h1>
+    <h2>A constructor with parameter is known as parameterized constructor.</h2>
+</body>
+</html>

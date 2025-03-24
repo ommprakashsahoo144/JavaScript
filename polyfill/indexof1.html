@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        Array.prototype.myIndexof = function(element,startIndex = 0){
+          for(let i = startIndex ; i< this.length ; i++){
+              if(this[i]=== element){
+            return i
+        }
+    }
+    return -1
+}
+
+let a = [1,2,3,4,5,5,1,2,3,4]
+
+let b = a.myIndexof(5)
+
+console.log(b)
+</script>
+</body>
+</html>

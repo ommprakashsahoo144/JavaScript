@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       class Student{
+        constructor(id,name,birthYear){
+            this.id=id;
+            this.name=name;
+            this.birthYear=birthYear;
+        }
+        calcAge(){
+            let currentYear=new Date().getFullYear()
+            let age= currentYear-this.birthYear;
+            console.log("age="+age);
+        }
+        static m1(){
+            console.log("m1 in class student");
+        }
+     }
+     let s1=new Student(101,"omm",2003);
+     console.log(s1);
+     s1.calcAge();
+     Student.m1();
+    </script>
+</head>
+<body>
+    <h1>using constructor</h1>
+    <h2>Non-static method are attached to prototype object.</h2>
+    <h2>Static method are not attached to prototype object.</h2>
+</body>
+</html>

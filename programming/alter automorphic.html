@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let l=+prompt("enter the starting number");
+        let u=+prompt("enter the ending number");
+        let count=0;
+        for(let i=l;i<=u;i++){
+            if(isAutomorphic(i)){
+                if(count%2==0){
+                    console.log(i)
+                }
+                count++;
+            }
+        }
+        function isAutomorphic(n){
+            let sqt=n*n;
+            while(n>0){
+                if(n%10 != sqt%10){
+                    return false;
+                }
+                n=Math.trunc(n/10);
+                sqt=Math.trunc(sqt/10);
+            }
+            return true;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>WAP to print in a range of alternative AUTOMORPHIC number.</h1>
+</body>
+</html>

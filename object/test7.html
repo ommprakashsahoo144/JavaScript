@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let t1={
+            travelsName:"VRL",
+            busId:"VR101"
+        };
+        let t2={
+            travelsName:"orange",
+            busId:"OR103"
+        };
+        let book=function(pName,seatNo){
+            console.log(`Hey ${pName},you have booked seat in ${this.travelsName} travels with seat number ${seatNo}`);
+        }
+        book.apply(t1,["omm",12]);
+
+
+        let passenger =["Alok",1];
+        
+        book.apply(t2,passenger);
+        book.call(t2,...passenger); //spread operator
+
+    </script>
+</head>
+<body>
+    <h1>function methods</h1>
+    <h2>1. F/N .apply() :-</h2>
+    <h2>By using apply() method, we can set this keyword value explicitly ,by passing owner object as an argument.</h2>
+    <h2>in apply() method the function arguments must be passed as an Array. </h2>
+</body>
+</html>
