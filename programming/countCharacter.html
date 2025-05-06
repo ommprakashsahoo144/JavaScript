@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+</head>
+<body>
+    <script>
+        function check(str) {
+            let cCount = 0;
+            let sCount = 0;
+            let nCount = 0;
+            let spCount = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                let chr = str[i];
+                if (chr >= "A" && chr <= "Z") {
+                    cCount++;
+                } else if (chr >= "a" && chr <= "z") {
+                    sCount++;
+                } else if (chr >= "0" && chr <= "9") {
+                    nCount++;
+                } else {
+                    spCount++;
+                }
+            }
+
+            return {
+                capitalLetters: cCount,
+                smallLetters: sCount,
+                numbers: nCount,
+                specialCharacters: spCount
+            };
+        }
+
+        console.log(check("omm@123"));
+    </script>
+</body>
+</html>
