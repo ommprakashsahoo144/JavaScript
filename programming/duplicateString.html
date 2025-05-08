@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Remove duplicate string in a array and return a new array of removed string.original array shouldn't change.</h1>
+</body>
+
+<script>
+    let str = ["xyzxxabzy"];
+
+let newArr = str.map(s => {
+  let result = "";
+  for (let i = 0; i < s.length; i++) {
+    if (result.indexOf(s[i]) === -1) {
+      result += s[i];
+    }
+  }
+  return result;
+});
+
+console.log("Original array:", str);
+console.log("New array:", newArr);
+    
+</script>
+</html>

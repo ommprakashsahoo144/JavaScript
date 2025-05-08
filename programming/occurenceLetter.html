@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Occurence of each character using reduce method and return a object</h1>
+</body>
+<script>
+    function countLetter(str){
+        return str.split('').reduce((acc,ele)=> {
+            if(acc[ele]){
+                acc[ele]=acc[ele]+1;
+            }else{
+                acc[ele]=1
+            }
+            return acc;
+        },{});
+    }
+    console.log(countLetter("banana"))
+</script>
+</html>

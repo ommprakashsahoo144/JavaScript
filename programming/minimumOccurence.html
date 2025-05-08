@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>find the character of minimum occurence in a string</h1>
+</body>
+<script>
+    function minOccurrence(str) {
+    let count = {};
+    let minChar = '';
+    let min = 0; 
+
+    
+    for (let char of str) {
+        count[char] = (count[char] || 0) + 1;
+    }
+
+   
+    for (let key in count) {
+        
+        if (min === 0 || count[key] < min) {
+            min = count[key];
+            minChar = key;
+        }
+    }
+
+    return minChar + " is " + min;
+}
+
+console.log(minOccurrence("abbcccddddee"));
+
+</script>
+</html>

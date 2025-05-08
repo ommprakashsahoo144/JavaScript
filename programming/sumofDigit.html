@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sum of digits in a string </h1>
+</body>
+<script>
+    //using reduce method.
+    function sumDigit(str) {
+    return str.split('').reduce((acc, ele) => {
+        if (ele >= '0' && ele <= '9') {
+            return acc + (ele - '0');
+        } else {
+            return acc;
+        }
+    }, 0);
+}
+
+console.log(sumDigit("omm123pra"));
+
+
+//without using reduce method.
+function sumDigit(str) {
+    let sum = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] >= '0' && str[i] <= '9') {
+            sum += str[i] - '0';
+        }
+    }
+    return sum;
+}
+
+console.log(sumDigit("omm623pra"));
+
+
+
+
+   
+</script>
+</html>
