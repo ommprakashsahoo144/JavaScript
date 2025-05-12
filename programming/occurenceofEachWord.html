@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>occurence of each word in a sentence</h1>
+</body>
+<script>
+    function countWordOccurrences(sentence) {
+  
+  const words = sentence.split(' ');
+
+ 
+  const wordCounts = {};
+
+ 
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i]; 
+
+    
+    if (wordCounts[word]) {
+      wordCounts[word]++;
+    } else {
+      
+      wordCounts[word] = 1;
+    }
+  }
+
+  return wordCounts;
+}
+
+
+const sentence = "hi my name is xyz and my age is four and bye bye";
+const result = countWordOccurrences(sentence);
+console.log(result);
+
+
+</script>
+</html>

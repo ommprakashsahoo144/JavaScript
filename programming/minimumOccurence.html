@@ -9,29 +9,25 @@
     <h1>find the character of minimum occurence in a string</h1>
 </body>
 <script>
-    function minOccurrence(str) {
-    let count = {};
-    let minChar = '';
-    let min = 0; 
+    let str = "aabbccdfg";
+  let minCount = str.length; // Start with the maximum possible
+let minChar = '';
 
-    
-    for (let char of str) {
-        count[char] = (count[char] || 0) + 1;
-    }
-
-   
-    for (let key in count) {
-        
-        if (min === 0 || count[key] < min) {
-            min = count[key];
-            minChar = key;
+for (let i = 0; i < str.length; i++) {
+    let count = 0;
+    for (let j = 0; j < str.length; j++) {
+        if (str[i] === str[j]) {
+            count++;
         }
     }
-
-    return minChar + " is " + min;
+    if (count < minCount) {
+        minCount = count;
+        minChar = str[i];
+    }
 }
 
-console.log(minOccurrence("abbcccddddee"));
+console.log(`Character with minimum occurrence: '${minChar}' occurs ${minCount} time(s)`);
+
 
 </script>
 </html>
