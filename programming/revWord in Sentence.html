@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>reverse a word in sentence without using spilt()</h1>
+</body>
+<script>
+    // function reverseWord(str){
+    //     let reverse = "";
+    //     for(let i = str.length-1; i>=0;i--){
+    //         reverse += str[i];
+    //     }
+    //     return reverse;
+    // }
+    // console.log(reverseWord("js is easy")); // ysae si sj
+
+    let str = "js is easy";
+    let word = "";
+    let result = "";
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] === " " || i === str.length) {
+    // Reverse the collected word
+    let reversedWord = "";
+    for (let j = word.length - 1; j >= 0; j--) {
+      reversedWord += word[j];
+    }
+    result += reversedWord;
+    if (i !== str.length) {
+      result += " ";
+    }
+    word = "";
+  } else {
+    word += str[i];
+  }
+}
+
+console.log(result); // Output: "sj si ysae"
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>check to string is Anagrams or not</h1>
+</body>
+<script>
+    function isAnagram(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  let arr1 = str1.split('');
+  let arr2 = str2.split('');
+  let count = 0;
+
+  for (const char1 of arr1) {
+    let matchFound = false;
+
+    for (const char2 of arr2) {
+      if (char1 === char2) {
+        count++;
+        break; // found a match for this char1, move to next char1
+      }
+    }
+  }
+
+  return count === arr1.length;
+}
+
+// Test
+console.log(isAnagram("race", "care"));  // true
+console.log(isAnagram("race", "card"));  // false
+
+</script>
+</html>
