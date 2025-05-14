@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>print odd even number 1 to 10 using recursion</h1>
+</body>
+<script>
+    function oddEven(n) {
+    if (n > 10) return;
+
+    if (n % 2 === 0) {
+        console.log(`${n} is even number`);
+    } else {
+        console.log(`${n} is odd number`);
+    }
+    oddEven(n + 1); // Fix: use n + 1 instead of n++
+}
+
+oddEven(1);
+
+</script>
+</html>
