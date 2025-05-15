@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sum of factors </h1>
+</body>
+<script>
+    function sumFactor(n,i=1){
+        if(i >= n) return 0;
+
+        if(n % i == 0){
+            return i + sumFactor(n,i + 1);
+        }else{
+            return sumFactor(n, i + 1)
+        }
+    }
+    console.log(sumFactor(4)); //3
+</script>
+</html>
