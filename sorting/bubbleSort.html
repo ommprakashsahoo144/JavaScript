@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>bubble sort</h1>
+</body>
+<script>
+    function bubbleSort(arr){
+        for(let i = 0; i<arr.length-1;i++){
+            for(let j =0;j<arr.length-1-i;j++){
+                if(arr[j] > arr[j+1]){
+                    [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
+                }
+            }
+        }
+        return arr;
+    }
+    let arr = [1,5,6,2,43,10,11]
+    console.log(bubbleSort(arr)) //[1,2,5,6,10,11,43]
+</script>
+</html>
