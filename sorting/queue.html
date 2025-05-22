@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Example</title>
+</head>
+<body>
+    <h1>QUEUE</h1>
+    <p>Open the browser console to see the output.</p>
+</body>
+<script>
+    class Queue {
+        constructor(items = []) {
+            this.items = items;
+        }
+
+        enqueue(ele) {
+            this.items.push(ele);
+            return true;
+        }
+
+        dequeue() {
+            if (this.items.length === 0) return "Queue is empty";
+            return this.items.shift();
+        }
+
+        front() {
+            if (this.items.length === 0) return "Queue is empty";
+            return this.items[0];
+        }
+
+        size() {
+            return this.items.length;
+        }
+    }
+
+    let q = new Queue();
+    console.log("Enqueue 1:", q.enqueue(1));       // true
+    console.log("Enqueue 2:", q.enqueue(2));       // true
+    console.log("Queue front:", q.front());        // 1
+    console.log("Queue size:", q.size());          // 2
+    console.log("Dequeue:", q.dequeue());          // 1
+    
+</script>
+</html>
