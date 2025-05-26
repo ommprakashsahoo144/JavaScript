@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List Example</title>
+</head>
+<body>
+    <h1> LinkList </h1>
+</body>
+<script>
+    class Node {
+        constructor(ele, next = null) {
+            this.ele = ele;
+            this.next = next;
+        }
+    }
+
+    class LinkList {
+        constructor() {
+            this.head = null;
+            this.size = 0;
+        }
+
+        // Add to the end
+        add(ele) {
+            const newNode = new Node(ele);
+            if (this.head === null) {
+                this.head = newNode;
+            } else {
+                let curr = this.head;
+                while (curr.next !== null) {
+                    curr = curr.next;
+                }
+                curr.next = newNode;
+            }
+            this.size++;
+        }
+
+        // Add to the beginning
+        unshift(ele) {
+            const newNode = new Node(ele);
+            newNode.next = this.head;
+            this.head = newNode;
+            this.size++;
+        }
+
+        // Remove from the beginning
+        shift() {
+            if (this.head === null) {
+                console.log("List is empty");
+                return null;
+            }
+            const removedValue = this.head.ele;
+            this.head = this.head.next;
+            this.size--;
+            return removedValue;
+        }
+
+        print() {
+            let curr = this.head;
+            let result = [];
+            while (curr !== null) {
+                result.push(curr.ele);
+                curr = curr.next;
+            }
+            console.log(result);
+        }
+    }
+
+    const list = new LinkList();
+    list.add(10);
+    list.add(20);
+    list.add(30);
+    list.print();  // [10, 20, 30]
+
+    list.unshift(5);
+    list.print();  // [5, 10, 20, 30]
+
+    console.log("Shifted:", list.shift());  // 5
+    list.print();  // [10, 20, 30]
+
+</script>
+</html>
