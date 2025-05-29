@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linked List Example</title>
+</head>
+<body>
+  <h1>Linked List</h1>
+</body>
+<script>
+  class Node {
+    constructor(ele, next = null) {
+      this.ele = ele;
+      this.next = next;
+    }
+  }
+
+  class LinkList {
+    constructor() {
+      this.head = null;
+      this.size = 0;
+    }
+
+    // Add to the end
+    add(ele) {
+      const newNode = new Node(ele);
+      if (this.head === null) {
+        this.head = newNode;
+      } else {
+        let curr = this.head;
+        while (curr.next !== null) {
+          curr = curr.next;
+        }
+        curr.next = newNode;
+      }
+      this.size++;
+    }
+
+    // Add to the beginning
+    unshift(ele) {
+      const newNode = new Node(ele, this.head);
+      this.head = newNode;
+      this.size++;
+    }
+
+    // Remove from the beginning
+    shift() {
+      if (this.head === null) {
+        console.log("List is empty");
+        return null;
+      }
+      const removedValue = this.head.ele;
+      this.head = this.head.next;
+      this.size--;
+      return removedValue;
+    }
+
+    // Remove from the end
+    pop() {
+      if (this.size === 0) {
+        console.log("Linked list is empty");
+        return null;
+      }
+
+      if (this.size === 1) {
+        const res = this.head.ele;
+        this.head = null;
+        this.size--;
+        return res;
+      }
+
+      let curr = this.head; 
+      for (let i = 0; i < this.size - 2; i++) {
+        curr = curr.next;
+      }
+
+      const result = curr.next.ele;
+      curr.next = null;
+      this.size--;
+      return result;
+    }
+
+    // Get value at index
+    get(index) {
+      if (index < 0 || index >= this.size) {
+        console.log("Index out of bounds");
+        return null;
+      }
+      let curr = this.head;
+      let count = 0;
+      while (count < index) {
+        curr = curr.next;
+        count++;
+      }
+      return curr.ele;
+    }
+
+    // Insert element at specific index
+    insert(ele, index) {
+      if (index < 0 || index > this.size) {
+        return `Can't add at ${index} position because size is ${this.size}`;
+      }
+
+      if (index === 0) {
+        this.head = new Node(ele, this.head);
+        this.size++;
+        return true;
+      }
+
+      let curr = this.head;
+      for (let i = 1; i < index; i++) {
+        curr = curr.next;
+      }
+
+      curr.next = new Node(ele, curr.next);
+      this.size++;
+      return true;
+    }
+
+    // Reverse the linked list
+    reverse() {
+      if (this.size === 0) {
+        return "Linked list is empty";
+      }
+
+      let curr = this.head;
+      let prev = null;
+      let next = null;
+
+      while (curr) {
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+      }
+
+      this.head = prev;
+      return true;
+    }
+
+    // Print all elements
+    print() {
+      let curr = this.head;
+      let result = [];
+      while (curr !== null) {
+        result.push(curr.ele);
+        curr = curr.next;
+      }
+      console.log(result);
+    }
+  }
+
+  // Example usage
+  const list = new LinkList();
+  list.add(10);
+  list.add(20);
+  list.add(30);
+  list.print();  // [10, 20, 30]
+
+  list.unshift(5);
+  list.print();  // [5, 10, 20, 30]
+
+  console.log("Shifted:", list.shift());  // 5
+  list.print();  // [10, 20, 30]
+
+  console.log("Popped:", list.pop());  // 30
+  list.print();  // [10, 20]
+
+  console.log("Element at index 1:", list.get(1));  // 20
+
+  console.log("Insert 15 at index 1:", list.insert(15, 1));  // true
+  list.print();  // [10, 15, 20]
+
+  console.log("Insert at invalid index:", list.insert(99, 10)); // Can't add...
+
+  console.log("Reversing the list...");
+  list.reverse();
+  list.print();  // [20, 15, 10]
+</script>
+</html>
